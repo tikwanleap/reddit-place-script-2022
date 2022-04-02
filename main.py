@@ -344,9 +344,9 @@ def task(credentials_index):
         last_time_placed_pixel = math.floor(time.time())
 
         # note: reddit limits us to place 1 pixel every 5 minutes, so I am setting it to
-        # 5 minutes and 30 seconds per pixel
+        # 5 minutes + random seconds (max. 20)
         # pixel_place_frequency = 330
-        pixel_place_frequency = 330
+        pixel_place_frequency = 300 + random.randint(1, 20)
 
         # pixel drawing preferences
         pixel_x_start = int(os.getenv("ENV_DRAW_X_START"))
