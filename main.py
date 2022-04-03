@@ -349,7 +349,7 @@ def task(credentials_index):
 		# note: reddit limits us to place 1 pixel every 5 minutes, so I am setting it to
 		# 5 minutes + random seconds (max. 20)
 		# pixel_place_frequency = 330
-		pixel_place_frequency = 300 + random.randint(1, 20)
+		pixel_place_frequency = 0 + random.randint(1, 20)
 
 		# pixel drawing preferences
 		pixel_x_start = int(os.getenv("ENV_DRAW_X_START"))
@@ -571,7 +571,8 @@ for i in range(num_credentials):
 
 
 def imgUpdate():
-	img_data = requests.get(
-		"https://raw.githubusercontent.com/XfedeX/reddit-place-script-2022/main/image.jpg").content
-	with open("image.jpg", "wb") as handler:
-		handler.write(img_data)
+	#img_data = requests.get(
+	#	"https://raw.githubusercontent.com/XfedeX/reddit-place-script-2022/main/image.jpg").content
+	#with open("image.jpg", "wb") as handler:
+	#	handler.write(img_data)
+	pass
